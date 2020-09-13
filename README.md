@@ -1,2 +1,2 @@
 
-<a href="https://www.NeilPrabhu.github.io">NeilPrabhu.github.io</a>
+<a href="https://neilprabhu.github.io">https://neilprabhu.github.io</a>
