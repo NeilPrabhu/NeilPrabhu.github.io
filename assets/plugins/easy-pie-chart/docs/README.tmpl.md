@@ -1,11 +1,8 @@
-## Name
-{%= _.doc("name.md") %}
+{%= name %}
 
-## Description
-{%= _.doc("description.md") %}
+{%= description %}
 
-## Badges
-{%= _.doc("bagdes.md") %}
+{%= _.doc('bagdes.md') %}
 
 ## Features
 {%= _.doc("features.md") %}
@@ -32,4 +29,4 @@
 {%= _.doc("credits.md") %}
 
 ## Copyright
-{%= copyright %} {% license %}
+{%= copyright %} {%= license %}
