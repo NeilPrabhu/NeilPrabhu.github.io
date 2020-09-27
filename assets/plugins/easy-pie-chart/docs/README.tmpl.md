@@ -4,7 +4,7 @@
 ## Description
 {%= _.doc("description.md") %}
 
-## 
+## Badges
 {%= _.doc("bagdes.md") %}
 
 ## Features
