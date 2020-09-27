@@ -5,7 +5,7 @@
 {{ _.doc('bagdes.md') }}
 
 ## Features
-{%= _.doc("features.md") %}
+{{ _.doc("features.md") }}
 
 ## Get started
 {%= _.doc("get-started.md") %}
