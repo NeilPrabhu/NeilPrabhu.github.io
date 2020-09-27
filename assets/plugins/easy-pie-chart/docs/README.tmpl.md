@@ -1,8 +1,11 @@
-{{% name %}}
+## Name
+{%= _.doc("name.md") %}
 
-{{% description %}}
+## Description
+{%= _.doc("description.md") %}
 
-{{%= _.doc('bagdes.md') %}}
+## 
+{%= _.doc("bagdes.md") %}
 
 ## Features
 {%= _.doc("features.md") %}
