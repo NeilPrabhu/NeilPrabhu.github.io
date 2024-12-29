@@ -12,24 +12,39 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     title: "Software Engineer",
-    company: "Amazon",
-    location: "Seattle, WA",
-    period: "2022 - Present",
+    company: "Juniper Networks",
+    location: "Sunnyvale, CA",
+    period: "April 2022 - Present",
     description: [
-      "Led development of microservices using Node.js and TypeScript",
-      "Implemented CI/CD pipelines reducing deployment time by 40%",
-      "Collaborated with cross-functional teams to deliver high-impact features"
+      "Successfully implemented a Generative AI (ChatGPT like) platform for employees to use, increasing overall productivity of 3,000+ engineers.",
+      "Wrote and Integrated ReviewBot, a bot using RAG (Retrieval-Augmented Generation) and LLMs (Large Language Models) to improve the quality of code reviews for commits to Juniper’s Operating Systems (JunOS and EVO), impacting over 2,000 software developers.",
+      "Developed on-premise RAG pipeline to ingest internal team documents to supplement LLM responses for questions on documents from HR, marketing, and engineering.",
+      "Redesigned back-end code coverage repository, reducing complexity of code base and runtime for developers by over 50%.",
+      "Architected and deployed robust CI/CD pipelines for internal tooling repositories, streamlining automated testing, containerization, and multi-stage deployments (testing, staging, production) on Kubernetes.",
+      "Enabled faster, more reliable service rollouts, reducing manual intervention and deployment time by 30%.",
+      "Migrated from NoSQL (Mongo) to relational database (Postgres), improving data handling and following company security standards."
     ]
   },
   {
-    title: "Software Engineer Intern",
-    company: "Microsoft",
-    location: "Redmond, WA",
-    period: "Summer 2021",
+    title: "Cloud Data Warehouse Engineer",
+    company: "Snowflake",
+    location: "San Mateo, CA",
+    period: "August 2021 - April 2022",
     description: [
-      "Developed full-stack features using React and .NET Core",
-      "Improved application performance by optimizing database queries",
-      "Participated in code reviews and agile development processes"
+      "Triaged Customer Support Tickets by resolving query runtime errors and warehouse issues",
+      "Analyzed and optimized customer queries for performance, using warehouses, lambda functions, views, and clustering techniques to improve query response times by an average of 40% (SnowPro Certified)",
+      "Supported Customers in setting up data pipelines from Cloud Providers to Snowflake (snow CLI & snow-pipe)"
+    ]
+  },
+  {
+    title: "Software Engineer",
+    company: "Juniper Networks",
+    location: "Sunnyvale, CA",
+    period: "July 2018 - June 2021",
+    description: [
+      "Built log monitoring service using ELK for internal teams, reducing VM downtime by 30% and debugging by 25%",
+      "Developed a Machine Learning Model to predict build compilation time increasing overall developer productivity",
+      "Contributed to Build as a Service, an on-premise developer platform using Kubernetes, reducing VM costs and deployment time by 50%"
     ]
   }
 ];

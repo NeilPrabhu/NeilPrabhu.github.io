@@ -12,26 +12,26 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "ML Model Deployment Platform",
-    description: "A platform for deploying machine learning models with automatic scaling and monitoring. Supports PyTorch and TensorFlow models.",
-    technologies: ["Python", "PyTorch", "FastAPI", "Docker", "Kubernetes"],
+    title: "MovieMood",
+    description: "MovieMood uses your Spotify playlist to recommend movies that match your mood.",
+    technologies: ["Python", "SKlearn", "FastAPI", "Docker", "Jupyter Notebook"],
     category: 'ml',
-    github: "https://github.com/neilprabhu/ml-platform"
+    github: "https://github.com/NeilPrabhu/MovieMood",
+    demo: "https://moviemood.streamlit.app/"
   },
   {
-    title: "Developer Productivity Tools",
-    description: "A collection of CLI tools to automate common development tasks and improve workflow efficiency.",
-    technologies: ["TypeScript", "Node.js", "Commander.js"],
+    title: "ML Fast API Boilerplate",
+    description: "A template for deploying a simple ML model (Using Housing Price preidction model).",
+    technologies: ["Python", "FastAPI", "Docker", "Kubernetes"],
     category: 'tools',
-    github: "https://github.com/neilprabhu/dev-tools"
+    github: "https://github.com/NeilPrabhu/FastAPI-ML-Template"
   },
   {
-    title: "Real-time Object Detection",
-    description: "A web application that performs real-time object detection using TensorFlow.js and webcam feed.",
-    technologies: ["React", "TensorFlow.js", "WebGL"],
+    title: "Dify RAG with RBAC",
+    description: "A implementation of RAG (Retrieval-Augmented Generation) with Role Based Access Control (RBAC) for secure document retrieval.",
+    technologies: ["Typescript","python", "agents", "workflow", "AI", "nextjs", "chatbots", "orchestration", "LLM", "backend-as-a-service", "RAG", "llmops", "llama3", "Javascript", "Docker"],
     category: 'ml',
-    github: "https://github.com/neilprabhu/object-detection",
-    demo: "https://object-detection.neilprabhu.com"
+    github: "https://github.com/NeilPrabhu/Dify-with-RBAC",
   }
 ];
 

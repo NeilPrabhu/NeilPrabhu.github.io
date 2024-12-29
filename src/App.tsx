@@ -4,6 +4,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
+import Education from './components/Education';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Skills />
         <Experience />
         <Projects />
+        <Education />
         
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Get in Touch</h2>

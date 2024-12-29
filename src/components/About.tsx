@@ -6,15 +6,15 @@ export default function About() {
       <h2 className="text-2xl font-bold text-gray-900 mb-4">About Me</h2>
       <div className="bg-white rounded-xl shadow-sm p-6">
         <p className="text-gray-600 leading-relaxed">
-          I'm a passionate software engineer with experience in full-stack development, specializing in building scalable web applications. 
-          I enjoy solving complex problems and creating efficient solutions that deliver real value.
+        A Software Engineer with 6 years of professional hands-on experience in backend development and machine learning,
+        especially in large-scale, DevOps systems.
         </p>
         <div className="mt-6 bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg">
           <h3 className="text-lg font-semibold text-primary mb-2">What Drives Me</h3>
           <ul className="space-y-2 text-gray-600">
             <li className="flex items-center gap-2">
               <span className="text-primary">🤖</span>
-              <span>Building ML models that solve real-world problems</span>
+              <span>Building & Deploying ML models that solve real-world problems</span>
             </li>
             <li className="flex items-center gap-2">
               <span className="text-primary">🛠️</span>
