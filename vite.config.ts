@@ -12,6 +12,6 @@ export default defineConfig({
 */
 
 export default defineConfig({
-  base: '/portfolio/',
+  base: '/',
   plugins: [react()]
 });
