@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function About() {
   return (
-    <section className="mb-12">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">About Me</h2>
-      <div className="bg-white rounded-xl shadow-sm p-6">
+    <section className="mb-3">
+      <h2 className="text-2xl font-bold text-gray-900 mb-2">About Me</h2>
+      <div className="bg-white rounded-xl shadow-sm p-4">
         <p className="text-gray-600 leading-relaxed">
         A Software Engineer with 6 years of professional hands-on experience in backend development and machine learning,
         especially in large-scale, DevOps systems.

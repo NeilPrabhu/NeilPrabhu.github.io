@@ -11,21 +11,21 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       <Header />
       
-      <main className="max-w-4xl mx-auto px-4 py-12">
+      <main className="max-w-4xl mx-auto px-4 py-8">
         <About />
         <Education />
         <Experience />
         <Skills />
         <Projects />
         
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Get in Touch</h2>
-          <div className="bg-white rounded-xl shadow-sm p-6">
-            <p className="text-gray-600 mb-4">
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Get in Touch</h2>
+          <div className="bg-white rounded-xl shadow-sm p-4">
+            <p className="text-gray-600 mb-2">
               I'm always open to discussing new projects and opportunities.
             </p>
             <a href="mailto:neilprabhu40@gmail.com" 
-               className="inline-block bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg transition-colors">
+               className="inline-block bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg transition-colors">
               Contact Me
             </a>
           </div>
@@ -33,7 +33,7 @@ function App() {
       </main>
 
       <footer className="border-t">
-        <div className="max-w-4xl mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto px-4 py-4">
           <p className="text-center text-gray-600">
             © {new Date().getFullYear()} Neil Prabhu. All rights reserved.
           </p>
