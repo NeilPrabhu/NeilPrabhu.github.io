@@ -5,6 +5,7 @@ on:
     branches:
       - master
 
+      
 jobs:
   build_and_predeploy:
     name: Build and Predeploy
