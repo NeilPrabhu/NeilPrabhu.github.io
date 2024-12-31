@@ -32,7 +32,7 @@ export default function Education() {
           {education.map((item, index) => (
             <div key={index} className="mb-6">
               <h3 className="text-xl font-semibold">{item.institution}</h3>
-              <p className="flex items-center text-gray-500 text-sm">
+              <p className="flex items-center text-gray-500 whitespace-nowrap text-xs sm:text-sm">
                 <span>
                   {item.degree} • {item.location}
                 </span>

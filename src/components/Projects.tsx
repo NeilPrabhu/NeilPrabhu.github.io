@@ -21,7 +21,7 @@ const projects: Project[] = [
   },
   {
     title: "ML Fast API Boilerplate",
-    description: "A template for deploying a simple ML model (Using Housing Price preidction model).",
+    description: "A template for deploying a simple ML model (Using Housing Price prediction model).",
     technologies: ["Python", "FastAPI", "Docker", "Kubernetes"],
     category: 'tools',
     github: "https://github.com/NeilPrabhu/FastAPI-ML-Template"
