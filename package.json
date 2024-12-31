@@ -3,13 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://neilprabhu.github.io/",
+  "homepage": "https://neilprabhu.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "add-domain": "echo \"neilprabhu.com\" > dist/CNAME",
+    "predeploy": "npm run build && npm run add-domain",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
