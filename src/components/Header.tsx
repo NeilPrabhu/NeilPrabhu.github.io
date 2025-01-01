@@ -32,7 +32,7 @@ export default function Header() {
                 <Mail size={20} />
                 Email
               </a>
-              <a href="dist/NeilPrabhu_Resume.pdf" 
+              <a href="/NeilPrabhu_Resume.pdf" 
                  download
                  className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg transition-colors">
                 <FileText size={20} />
