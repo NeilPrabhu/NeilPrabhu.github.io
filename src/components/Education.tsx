@@ -23,24 +23,19 @@ const education: EducationItem[] = [
 
 export default function Education() {
     return (
-      <>
-        <section>
-          {/* ...existing Experience component JSX... */}
-        </section>
-        <section className="max-w-4xl mx-auto px-4 py-16">
-          <h2 className="text-2xl font-bold mb-8">Education</h2>
-          {education.map((item, index) => (
-            <div key={index} className="mb-6">
-              <h3 className="text-xl font-semibold">{item.institution}</h3>
-              <p className="flex items-center text-gray-500 whitespace-nowrap text-xs sm:text-sm">
-                <span>
-                  {item.degree} • {item.location}
-                </span>
-                <span className="ml-auto">{item.period}</span>
-              </p>
-            </div>
-          ))}
-        </section>
-      </>
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold mb-8">Education</h2>
+        {education.map((item, index) => (
+          <div key={index} className="mb-6">
+            <h3 className="text-xl font-semibold">{item.institution}</h3>
+            <p className="flex items-center text-gray-500 whitespace-nowrap text-xs sm:text-sm">
+              <span>
+                {item.degree} • {item.location}
+              </span>
+              <span className="ml-auto">{item.period}</span>
+            </p>
+          </div>
+        ))}
+      </section>
     );
   }
