@@ -4,7 +4,7 @@ export default function Skills() {
   const skills = {
     ml: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'Computer Vision'],
     development: ['React', 'TypeScript', 'Node.js', 'Python'],
-    tools: ['Docker', 'Kubernetes', 'AWS', 'CI/CD']
+    tools: ['Docker', 'Kubernetes', 'AWS', 'CI/CD - Jenkins, GitLab, GitHub Actions']
   };
 
   return (
