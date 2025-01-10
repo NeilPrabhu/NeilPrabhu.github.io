@@ -20,8 +20,8 @@ const projects: Project[] = [
     demo: "https://moviemood.streamlit.app/"
   },
   {
-    title: "ML Fast API Boilerplate",
-    description: "A template for deploying a simple ML model (Using Housing Price prediction model).",
+    title: "ML FastAPI Boilerplate",
+    description: "A template for deploying a Machine Learning models (Using Housing Price prediction model).",
     technologies: ["Python", "FastAPI", "Docker", "Kubernetes"],
     category: 'tools',
     github: "https://github.com/NeilPrabhu/FastAPI-ML-Template"
