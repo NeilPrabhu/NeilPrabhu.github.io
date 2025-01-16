@@ -16,13 +16,14 @@ const experiences: ExperienceItem[] = [
     location: "Sunnyvale, CA",
     period: "April 2022 - Present",
     description: [
-      "Successfully implemented a Generative AI (ChatGPT like) platform for employees to use, increasing overall productivity of 3,000+ engineers.",
-      "Wrote and Integrated ReviewBot, a bot using RAG (Retrieval-Augmented Generation) and LLMs (Large Language Models) to improve the quality of code reviews for commits to Juniper’s Operating Systems (JunOS and EVO), impacting over 2,000 software developers.",
-      "Developed on-premise RAG pipeline to ingest internal team documents to supplement LLM responses for questions on documents from HR, marketing, and engineering.",
-      "Redesigned back-end code coverage repository, reducing complexity of code base and runtime for developers by over 50%.",
-      "Architected and deployed robust CI/CD pipelines for internal tooling repositories, streamlining automated testing, containerization, and multi-stage deployments (testing, staging, production) on Kubernetes.",
+      "Integrated a Generative AI platform for Juniper Employees, boosting productivity for 3,000+ employees.",
+      "Built a Python-based “ReviewBot” (RAG + LLM) to improve code reviews for 1,500+ developers ",
+      "Refactored backend from Perl to Python, reducing complexity and runtime by 50%.",
+      "Redesigned backend (8+ applications) with gRPC on Kubernetes, reducing resource usage and costs by 30% while cutting inter-service latency by 30%."
+      "Enabled faster, more reliable service rollouts, reducing manual intervention and deployment time by 20%.",
       "Enabled faster, more reliable service rollouts, reducing manual intervention and deployment time by 30%.",
-      "Migrated from NoSQL (Mongo) to relational database (Postgres), improving data handling and following company security standards."
+      "Migrated from NoSQL (Mongo) to relational database (Postgres), improving data handling and following company security standards.",
+      "Ported the code coverage team's FT workflow from Perl to Golang, speeding up processing for hundreds of GB of data by 60% and unblocking users dependent on coverage metrics."
     ]
   },
   {
@@ -31,9 +32,9 @@ const experiences: ExperienceItem[] = [
     location: "San Mateo, CA",
     period: "August 2021 - April 2022",
     description: [
-      "Triaged Customer Support Tickets by resolving query runtime errors and warehouse issues",
-      "Analyzed and optimized customer queries for performance, using warehouses, lambda functions, views, and clustering techniques to improve query response times by an average of 40% (SnowPro Certified)",
-      "Supported Customers in setting up data pipelines from Cloud Providers to Snowflake (snow CLI & snow-pipe)"
+      "Resolved Customer Support Tickets: Handled 50+ tickets monthly, diagnosing query runtime errors and warehouse issues—cutting escalation to tier-1 support by 35%.",
+      "Optimized Database Performance: Analyzed and tuned customer queries (warehouses, lambda functions, clustering) - SnowPro Certified.",
+      "Built Cloud-to-Snowflake Pipelines: Supported 20+ enterprise clients in creating resilient data pipelines from Azure, GCP, and AWS to Snowflake."
     ]
   },
   {
@@ -42,9 +43,9 @@ const experiences: ExperienceItem[] = [
     location: "Sunnyvale, CA",
     period: "July 2018 - June 2021",
     description: [
-      "Built log monitoring service using ELK for internal teams, reducing VM downtime by 30% and debugging by 25%",
-      "Developed a Machine Learning Model to predict build compilation time increasing overall developer productivity",
-      "Contributed to Build as a Service, an on-premise developer platform using Kubernetes, reducing VM costs and deployment time by 50%"
+      "Built Log Monitoring (ELK): Implemented a centralized log monitoring service for internal teams, reducing VM downtime by 30% and speeding up debugging by 25%.",
+      "Deployed an ML Model (Python/FastAPI): Developed a regression model to estimate build compile times, cutting average wait time by 20% and boosting developer productivity.",
+      "Contributed to “Build as a Service” (Kubernetes): Reduced VM costs by 40% and deployment times by 50% through automation in an on-prem platform written in Python."
     ]
   }
 ];
