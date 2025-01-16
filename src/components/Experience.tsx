@@ -19,7 +19,7 @@ const experiences: ExperienceItem[] = [
       "Integrated a Generative AI platform for Juniper Employees, boosting productivity for 3,000+ employees.",
       "Built a Python-based “ReviewBot” (RAG + LLM) to improve code reviews for 1,500+ developers ",
       "Refactored backend from Perl to Python, reducing complexity and runtime by 50%.",
-      "Redesigned backend (8+ applications) with gRPC on Kubernetes, reducing resource usage and costs by 30% while cutting inter-service latency by 30%."
+      "Redesigned backend (8+ applications) with gRPC on Kubernetes, reducing resource usage and costs by 30% while cutting inter-service latency by 30%.",
       "Enabled faster, more reliable service rollouts, reducing manual intervention and deployment time by 20%.",
       "Enabled faster, more reliable service rollouts, reducing manual intervention and deployment time by 30%.",
       "Migrated from NoSQL (Mongo) to relational database (Postgres), improving data handling and following company security standards.",
