@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function Skills() {
   const skills = {
-    ml: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'Computer Vision'],
-    development: ['React', 'TypeScript', 'Node.js', 'Python'],
-    tools: ['Docker', 'Kubernetes', 'AWS', 'CI/CD - Jenkins, GitLab, GitHub Actions']
+    ml: ['PyTorch', 'PySpark', 'Databricks', 'Keras', 'Spark'],
+    development: ['React.js', 'Svelte.js' ,'TypeScript', 'Node.js', 'Python', 'Golang'],
+    tools: ['Docker', 'Kubernetes', 'AWS/Azure', 'CI/CD - Jenkins']
   };
 
   return (
@@ -12,7 +12,7 @@ export default function Skills() {
       <h2 className="text-2xl font-bold text-gray-900 mb-4">Skills</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-          <h3 className="font-semibold text-indigo-600 mb-3">Machine Learning</h3>
+          <h3 className="font-semibold text-indigo-600 mb-3">Machine Learning & Data</h3>
           <ul className="space-y-2">
             {skills.ml.map(skill => (
               <li key={skill} className="text-gray-600 flex items-center gap-2">
