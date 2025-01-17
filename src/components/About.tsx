@@ -6,7 +6,7 @@ export default function About() {
       <h2 className="text-2xl font-bold text-gray-900 mb-2">About Me</h2>
       <div className="bg-white rounded-xl shadow-sm p-4">
         <p className="text-gray-600 leading-relaxed">
-        A Software Engineer with 6 years of professional hands-on experience in backend development and machine learning,
+        Experienced Software Engineer with 6.5 years of professional hands-on experience in backend development and machine learning,
         especially in large-scale, DevOps systems.
         </p>
         <div className="mt-6 bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg">
