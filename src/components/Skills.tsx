@@ -3,8 +3,8 @@ import React from 'react';
 export default function Skills() {
   const skills = {
     ml: ['PyTorch', 'PySpark', 'Databricks', 'Keras', 'Spark'],
-    development: ['React.js', 'Svelte.js' ,'TypeScript', 'Node.js', 'Python', 'Golang'],
-    tools: ['Docker', 'Kubernetes', 'AWS/Azure', 'CI/CD - Jenkins']
+    development: ['Svelte.js' ,'TypeScript', 'Node.js', 'Python', 'Golang', 'Ruby on Rails', 'perl'],
+    tools: ['Docker', 'Kubernetes', 'AWS/Azure', 'CI/CD - Jenkins', 'AWS- S3, EC2, Lambda', 'Azure - Blob Storage, AKS ,Functions']
   };
 
   return (
