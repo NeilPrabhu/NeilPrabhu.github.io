@@ -7,6 +7,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import NonTech from './components/NonTech';
+import PrivacyPolicy from './components/PrivacyPolicy';
 
 function Home() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/non-tech" element={<NonTech />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </main>
         <footer className="border-t">
