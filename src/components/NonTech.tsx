@@ -434,19 +434,19 @@ const NonTech = () => {
         Non-Tech Related Stuff
       </h2>
       
-      <div className="bg-white rounded-xl shadow-sm p-6">
-        <div className="flex items-center mb-6">
-          <span className="text-2xl mr-3">🍴</span>
-          <h3 className="text-xl font-semibold text-gray-900">Recipes</h3>
+      <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6">
+        <div className="flex items-center mb-4 sm:mb-6">
+          <span className="text-xl sm:text-2xl mr-2 sm:mr-3">🍴</span>
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Recipes</h3>
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex flex-wrap gap-2 mb-6 border-b border-gray-200">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6 border-b border-gray-200 pb-1">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-t-lg font-medium transition-colors duration-200 ${
+              className={`flex items-center space-x-1.5 sm:space-x-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-t-lg text-sm sm:text-base font-medium transition-colors duration-200 ${
                 activeTab === tab.id
                   ? "bg-blue-50 text-blue-700 border-b-2 border-blue-700"
                   : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
@@ -459,16 +459,107 @@ const NonTech = () => {
         </div>
 
         {/* Recipe Content */}
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {recipes[activeTab]?.map((recipe) => (
-            <RecipeCard key={recipe.id} recipe={recipe} />
+            <div key={recipe.id} className="bg-white rounded-xl shadow-sm border border-gray-100 transition-all duration-200 hover:shadow-md">
+              <div
+                className="p-4 sm:p-6 cursor-pointer"
+                onClick={() => toggleRecipe(recipe.id)}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2 sm:space-x-3">
+                    <span className="text-xl sm:text-2xl">{recipe.emoji}</span>
+                    <div>
+                      <h3 className="text-base sm:text-lg font-semibold text-gray-900">{recipe.title}</h3>
+                      <p className="text-xs sm:text-sm text-gray-500">{recipe.servings}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-xs sm:text-sm text-blue-600 font-medium">
+                      {expandedRecipe === recipe.id ? "Hide Recipe" : "View Recipe"}
+                    </span>
+                    <svg
+                      className={`w-4 h-4 sm:w-5 sm:h-5 text-blue-600 transition-transform duration-200 ${
+                        expandedRecipe === recipe.id ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              {expandedRecipe === recipe.id && (
+                <div className="px-4 sm:px-6 pb-4 sm:pb-6 border-t border-gray-50">
+                  <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mt-4 sm:mt-6">
+                    <div>
+                      <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-2 sm:mb-3 flex items-center">
+                        <span className="text-base sm:text-lg mr-1.5 sm:mr-2">🛒</span>
+                        Ingredients
+                      </h4>
+                      <ul className="space-y-1.5 sm:space-y-2">
+                        {recipe.ingredients.map((ingredient, index) => (
+                          <li key={index} className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                            {ingredient.startsWith("**") ? (
+                              <span className="font-semibold text-gray-900">
+                                {ingredient.replace(/\*\*/g, "")}
+                              </span>
+                            ) : (
+                              <>• {ingredient}</>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-2 sm:mb-3 flex items-center">
+                        <span className="text-base sm:text-lg mr-1.5 sm:mr-2">👨‍🍳</span>
+                        Instructions
+                      </h4>
+                      <ol className="space-y-2 sm:space-y-3">
+                        {recipe.instructions.map((instruction, index) => (
+                          <li key={index} className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                            <span className="font-medium text-blue-600 mr-1.5 sm:mr-2">{index + 1}.</span>
+                            <span
+                              dangerouslySetInnerHTML={{
+                                __html: instruction.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+                              }}
+                            />
+                          </li>
+                        ))}
+                      </ol>
+
+                      {recipe.tips && recipe.tips.length > 0 && (
+                        <div className="mt-4 sm:mt-6">
+                          <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-2 sm:mb-3 flex items-center">
+                            <span className="text-base sm:text-lg mr-1.5 sm:mr-2">💡</span>
+                            Tips
+                          </h4>
+                          <ul className="space-y-1.5 sm:space-y-2">
+                            {recipe.tips.map((tip, index) => (
+                              <li key={index} className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                                • {tip}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
         </div>
 
         {recipes[activeTab]?.length === 0 && (
-          <div className="text-center py-12">
-            <span className="text-4xl mb-4 block">🍽️</span>
-            <p className="text-gray-500 italic">No recipes available for this category yet!</p>
+          <div className="text-center py-8 sm:py-12">
+            <span className="text-3xl sm:text-4xl mb-3 sm:mb-4 block">🍽️</span>
+            <p className="text-sm sm:text-base text-gray-500 italic">No recipes available for this category yet!</p>
           </div>
         )}
       </div>
