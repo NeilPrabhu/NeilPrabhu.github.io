@@ -43,6 +43,7 @@ const projects: Project[] = [
     technologies: ["Typescript","python", "agents", "workflow", "AI", "nextjs", "chatbots", "orchestration", "LLM", "backend-as-a-service", "RAG", "llmops", "llama3", "Javascript", "Docker"],
     category: 'ml',
     github: "https://github.com/NeilPrabhu/Dify-with-RBAC",
+    image: "/assets/images/dify_logo.png",
   }
 ];
 
