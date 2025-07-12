@@ -43,7 +43,7 @@ const projects: Project[] = [
     technologies: ["Typescript","python", "agents", "workflow", "AI", "nextjs", "chatbots", "orchestration", "LLM", "backend-as-a-service", "RAG", "llmops", "llama3", "Javascript", "Docker"],
     category: 'ml',
     github: "https://github.com/NeilPrabhu/Dify-with-RBAC",
-    image: "/assets/images/dify_logo.png",
+    image: "/assets/images/dify_logo.png"
   }
 ];
 
@@ -70,11 +70,15 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div key={index} className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
             {project.image && (
-              <div className="mb-4">
+              <div className="mb-4 flex items-center justify-center">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover rounded-lg"
+                  className={`rounded-lg ${
+                    project.title === "Dify RAG with RBAC" || project.title === "MovieMood"
+                      ? "h-32 w-auto object-contain"
+                      : "w-full h-48 object-cover"
+                  }`}
                 />
               </div>
             )}

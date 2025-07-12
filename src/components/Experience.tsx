@@ -7,17 +7,28 @@ interface ExperienceItem {
   location: string;
   period: string;
   description: string[];
+  companyUrl?: string;
 }
 
 const experiences: ExperienceItem[] = [
   {
+    title: "Senior Software Engineer",
+    company: "Zest AI",
+    location: "Los Angeles, CA",
+    period: "June 2025 - Present",
+    description: [
+      "Core Product in ML"
+    ],
+    companyUrl: "https://www.zest.ai/"
+  },
+  {
     title: "Software Engineer",
     company: "Juniper Networks",
     location: "Sunnyvale, CA",
-    period: "April 2022 - Present",
+    period: "April 2022 - June 2025",
     description: [
       "Integrated a Generative AI platform for Juniper Employees, boosting productivity for 3,000+ employees.",
-      "Built a Python-based “ReviewBot” (RAG + LLM) to improve code reviews for 1,500+ developers ",
+      "Built a Python-based \"ReviewBot\" (RAG + LLM) to improve code reviews for 1,500+ developers",
       "Refactored backend from Perl to Python, reducing complexity and runtime by 50%.",
       "Redesigned backend (8+ applications) with gRPC on Kubernetes, reducing resource usage and costs by 30% while cutting inter-service latency by 30%.",
       "Enabled faster, more reliable service rollouts, reducing manual intervention and deployment time by 20%.",
@@ -45,7 +56,7 @@ const experiences: ExperienceItem[] = [
     description: [
       "Built Log Monitoring (ELK): Implemented a centralized log monitoring service for internal teams, reducing VM downtime by 30% and speeding up debugging by 25%.",
       "Deployed an ML Model (Python/FastAPI): Developed a regression model to estimate build compile times, cutting average wait time by 20% and boosting developer productivity.",
-      "Contributed to “Build as a Service” (Kubernetes): Reduced VM costs by 40% and deployment times by 50% through automation in an on-prem platform written in Python."
+      "Contributed to \"Build as a Service\" (Kubernetes): Reduced VM costs by 40% and deployment times by 50% through automation in an on-prem platform written in Python."
     ]
   }
 ];
@@ -60,7 +71,18 @@ export default function Experience() {
             <div className="flex flex-wrap justify-between items-start mb-4">
               <div>
                 <h3 className="text-xl font-semibold text-gray-900">{exp.title}</h3>
-                <p className="text-primary font-medium">{exp.company}</p>
+                {exp.companyUrl ? (
+                  <a 
+                    href={exp.companyUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-primary font-medium hover:underline"
+                  >
+                    {exp.company}
+                  </a>
+                ) : (
+                  <p className="text-primary font-medium">{exp.company}</p>
+                )}
               </div>
               <div className="text-gray-500 text-sm space-y-1">
                 <div className="flex items-center gap-1">
