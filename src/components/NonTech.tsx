@@ -66,6 +66,29 @@ const NonTech = () => {
         ]
       },
       {
+        id: "scrambled-egg-skillet",
+        title: "Scrambled Egg & Veggie Skillet",
+        emoji: "🍳",
+        servings: "1 Serving",
+        ingredients: [
+          "3 egg whites + 1 whole egg",
+          "1/4 cup onion, chopped",
+          "1/4 cup bell pepper, chopped",
+          "1/4 cup spinach, chopped",
+          "1 tsp olive oil or nonstick spray",
+          "Salt & black pepper to taste",
+          "1/4 tsp turmeric (optional)"
+        ],
+        instructions: [
+          "**Prep veggies:** Chop onion, bell pepper, and spinach",
+          "**Heat oil:** Heat oil in a nonstick pan over medium heat",
+          "**Sauté veggies:** Cook vegetables for 2–3 mins until softened",
+          "**Whisk eggs:** In a bowl, whisk eggs with salt, pepper, turmeric (optional)",
+          "**Scramble:** Pour eggs into pan, scramble gently until fully cooked",
+          "**Serve hot:** Great with cucumber slices or cinnamon water"
+        ]
+      },
+      {
         id: "almond-croissant",
         title: "Almond Croissant Baked Oats",
         emoji: "🥐",
@@ -102,6 +125,34 @@ const NonTech = () => {
           "**Sauté Veggies:** In same pan, add 1/2 tsp olive oil. Stir-fry zucchini, onion, bell peppers for ~4–5 min. Add cooked chicken + tamari, toss to coat",
           "**Assemble:** Plate rice or potatoes. Top with stir-fry. Garnish with lemon juice or chopped coriander"
         ]
+      },
+      {
+        id: "paneer-veggie-rice",
+        title: "Paneer Veggie Rice Bowl",
+        emoji: "🍛",
+        servings: "4 Servings (using 400g paneer)",
+        ingredients: [
+          "400g low-fat paneer, cubed",
+          "160g brown rice, uncooked (~2 cups cooked)",
+          "1 cup onion, chopped",
+          "1 cup bell pepper, chopped",
+          "1 cup tomato, chopped",
+          "1 cup spinach or zucchini (optional)",
+          "4 tsp olive oil",
+          "1 tsp turmeric",
+          "1 tsp cumin powder",
+          "3/4 tsp chili powder (optional)",
+          "Salt & black pepper to taste",
+          "Juice of 1 lemon",
+          "Fresh coriander (optional)"
+        ],
+        instructions: [
+          "**Cook rice:** Cook brown rice in 2x water (20–25 mins), fluff and set aside",
+          "**Sauté vegetables:** Heat 2 tsp olive oil in a pan, sauté onion, bell pepper, tomato, and optional spinach until soft (~4 mins)",
+          "**Add paneer:** Add remaining oil and stir in paneer cubes + spices (turmeric, cumin, chili, salt, pepper)",
+          "**Cook paneer:** Cook for 5–6 mins, stirring gently to avoid breaking paneer",
+          "**Assemble:** Divide rice + paneer mix into 4 portions. Squeeze lemon and garnish with coriander"
+        ]
       }
     ],
     dinner: [
@@ -129,6 +180,36 @@ const NonTech = () => {
           "**Cook Chicken:** Grill or pan-sear on medium heat for 4–5 minutes per side until fully cooked. Slice and divide into 4 portions (~170g each)",
           "**Prep Veggies:** Steam or sauté broccoli, zucchini, and bell peppers until tender-crisp",
           "**Assemble Bowls:** Divide potatoes, chicken, and veggies among 4 containers. Garnish with coriander"
+        ]
+      },
+      {
+        id: "chicken-curry-potatoes",
+        title: "Simple Chicken Curry + Boiled Potatoes",
+        emoji: "🍛",
+        servings: "5 Servings",
+        ingredients: [
+          "**Protein & Carbs:** 680g chicken breast, cubed",
+          "850g potatoes (~170g per serving = 5 medium potatoes), cubed",
+          "**Curry Base:** 1 1/4 cups onion, chopped (1–2 medium onions)",
+          "1 1/4 cups tomato, chopped (2 Roma tomatoes)",
+          "5 cloves garlic, minced",
+          "1.5-inch ginger, grated or minced",
+          "5 tsp olive oil, divided",
+          "1.25 tsp turmeric",
+          "1.25 tsp cumin powder",
+          "1.25 tsp coriander powder",
+          "1 tsp garam masala",
+          "1/2–1 tsp chili powder (optional)",
+          "Salt & pepper, to taste",
+          "Juice of 1–2 lemons",
+          "Fresh coriander (optional)"
+        ],
+        instructions: [
+          "**Boil the Potatoes:** Cube 850g potatoes. Boil in salted water until fork-tender (~8–10 mins). Drain and set aside (or roast if preferred)",
+          "**Sear the Chicken:** Heat 2.5 tsp olive oil in a nonstick pan. Sear chicken in batches until browned and just cooked. Remove and set aside",
+          "**Make the Curry Base:** Add remaining 2.5 tsp oil to the pan. Sauté onion, garlic, and ginger for 2–3 mins. Add chopped tomato, cook until soft (~3 mins). Stir in turmeric, cumin, coriander, chili, salt & pepper. Cook until fragrant (~1–2 mins)",
+          "**Combine Chicken & Simmer:** Return chicken to the pan. Add 1/4 cup water and simmer for 4–5 mins. Finish with garam masala and lemon juice",
+          "**Serve:** Divide into 5 containers. Add ~170g potatoes and a portion of curry to each. Garnish with coriander if desired"
         ]
       }
     ],
