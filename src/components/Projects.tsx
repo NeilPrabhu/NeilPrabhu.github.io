@@ -1,16 +1,26 @@
 import React from 'react';
-import { Github, Link, Brain, Code, Cpu } from 'lucide-react';
+import { Github, Link, Brain, Code, Cpu, AppWindow } from 'lucide-react';
 
 interface Project {
   title: string;
   description: string;
   technologies: string[];
-  category: 'ml' | 'fullstack' | 'tools';
+  category: 'ml' | 'fullstack' | 'tools' | 'mobile';
   github?: string;
   demo?: string;
+  image?: string;
+  appStore?: string;
 }
 
 const projects: Project[] = [
+  {
+    title: "Sapling - Parent Journey App",
+    description: "A comprehensive mobile app designed to support parents through their journey, offering personalized guidance and tracking tools.",
+    technologies: ["Swift", "SwiftUI", "iOS", "Core Data", "HealthKit"],
+    category: 'mobile',
+    appStore: "https://apps.apple.com/us/app/sapling-parent-journey/id6746580454",
+    image: "/assets/images/sapling.png"
+  },
   {
     title: "MovieMood",
     description: "MovieMood uses your Spotify playlist to recommend movies that match your mood.",
@@ -43,6 +53,8 @@ const CategoryIcon = ({ category }: { category: Project['category'] }) => {
       return <Code className="text-blue-600" size={20} />;
     case 'fullstack':
       return <Cpu className="text-purple-600" size={20} />;
+    case 'mobile':
+      return <AppWindow className="text-green-600" size={20} />;
     default:
       return null;
   }
@@ -55,6 +67,15 @@ export default function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <div key={index} className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+            {project.image && (
+              <div className="mb-4">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover rounded-lg"
+                />
+              </div>
+            )}
             <div className="flex items-center gap-2 mb-2">
               <CategoryIcon category={project.category} />
               <h3 className="text-xl font-semibold text-gray-900">{project.title}</h3>
@@ -67,6 +88,8 @@ export default function Projects() {
                     ? 'bg-indigo-50 text-indigo-700'
                     : project.category === 'tools'
                     ? 'bg-blue-50 text-blue-700'
+                    : project.category === 'mobile'
+                    ? 'bg-green-50 text-green-700'
                     : 'bg-purple-50 text-purple-700'
                 }`}>
                   {tech}
@@ -90,6 +113,15 @@ export default function Projects() {
                    rel="noopener noreferrer">
                   <Link size={18} />
                   <span>Live Demo</span>
+                </a>
+              )}
+              {project.appStore && (
+                <a href={project.appStore} 
+                   className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors"
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                  <AppWindow size={18} />
+                  <span>App Store</span>
                 </a>
               )}
             </div>
