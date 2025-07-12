@@ -27,7 +27,8 @@ const projects: Project[] = [
     technologies: ["Python", "SKlearn", "FastAPI", "Docker", "Jupyter Notebook"],
     category: 'ml',
     github: "https://github.com/NeilPrabhu/MovieMood",
-    demo: "https://moviemood.streamlit.app/"
+    demo: "https://moviemood.streamlit.app/",
+    image: "/assets/images/movieMood.jpg"
   },
   {
     title: "ML FastAPI Boilerplate",
