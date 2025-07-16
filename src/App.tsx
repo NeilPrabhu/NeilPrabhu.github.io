@@ -1,13 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import About from './components/About';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Education from './components/Education';
-import NonTech from './components/NonTech';
-import PrivacyPolicy from './components/PrivacyPolicy';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Header, Navigation } from "./components/layout";
+import { 
+  About, 
+  Education, 
+  Experience, 
+  Projects, 
+  Skills, 
+  PrivacyPolicy 
+} from "./components/portfolio";
+import NonTech from "./components/non-tech/NonTech";
 
 function Home() {
   return (
