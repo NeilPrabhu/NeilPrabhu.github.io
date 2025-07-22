@@ -10,10 +10,39 @@ export const recipeCategories: RecipeCategory[] = [
 export const recipes: RecipeCategories = {
   breakfast: [
     {
+      id: "egg-white-scramble",
+      title: "Egg White Scramble with Veggies",
+      emoji: "🍳",
+      servings: "1 Serving",
+      cookingTime: "10 minutes",
+      difficulty: "Easy",
+      tags: ["high-protein", "low-carb", "quick", "vegetarian"],
+      dietaryInfo: ["High Protein", "Low Carb", "Vegetarian"],
+      ingredients: [
+        "160g (≈ 2/3 cup) egg whites",
+        "30g (1 cup) spinach",
+        "40g (≈ 1/3 cup) zucchini curls",
+        "50g (≈ 1/3 cup) red bell pepper",
+        "Avocado oil spray",
+        "Salt, pepper, chili flakes to taste"
+      ],
+      instructions: [
+        "**Prep pan:** Spray a nonstick skillet lightly with avocado oil and heat on medium",
+        "**Cook veggies:** Add chopped red bell pepper and zucchini curls. Sauté for 2–3 minutes until slightly tender",
+        "**Add spinach:** Add spinach and cook until wilted (about 1 minute)",
+        "**Scramble eggs:** Pour in egg whites and scramble gently until fully set",
+        "**Season & serve:** Season with salt, pepper, and chili flakes. Serve immediately"
+      ]
+    },
+    {
       id: "whey-oats-porridge",
       title: "Whey & Oats Porridge Bowl",
       emoji: "🍳",
       servings: "1 Serving",
+      cookingTime: "15 minutes",
+      difficulty: "Easy",
+      tags: ["high-protein", "post-workout", "filling", "customizable"],
+      dietaryInfo: ["High Protein", "Post-Workout"],
       ingredients: [
         "20g (1/4 cup) rolled oats",
         "1.25 scoops whey protein",
@@ -38,6 +67,10 @@ export const recipes: RecipeCategories = {
       title: "Egg White Veggie Hash Bowl",
       emoji: "🍳",
       servings: "1 Serving",
+      cookingTime: "12 minutes",
+      difficulty: "Easy",
+      tags: ["high-protein", "low-carb", "savory", "quick"],
+      dietaryInfo: ["High Protein", "Low Carb", "Vegetarian"],
       ingredients: [
         "3 egg whites",
         "60g (1/2 medium) bell pepper, chopped",
@@ -63,6 +96,10 @@ export const recipes: RecipeCategories = {
       title: "Tofu Bhurji Bowl",
       emoji: "🍳",
       servings: "1 Serving",
+      cookingTime: "15 minutes",
+      difficulty: "Easy",
+      tags: ["vegan", "high-protein", "indian", "spicy"],
+      dietaryInfo: ["Vegan", "High Protein", "Plant-Based"],
       ingredients: [
         "120g (4.2 oz) firm tofu, crumbled",
         "40g (1/4 cup) onion, finely chopped",
@@ -90,6 +127,10 @@ export const recipes: RecipeCategories = {
       title: "Protein-Powered Smoothie Bowl",
       emoji: "🥣",
       servings: "1 Serving",
+      cookingTime: "5 minutes",
+      difficulty: "Easy",
+      tags: ["high-protein", "quick", "smoothie", "customizable", "post-workout"],
+      dietaryInfo: ["High Protein", "Quick Prep", "Post-Workout"],
       ingredients: [
         "1.25 scoops whey protein (vanilla or chocolate preferred)",
         "30g (1/4 medium) frozen banana (for texture)",
@@ -110,6 +151,10 @@ export const recipes: RecipeCategories = {
       title: "Scrambled Egg & Veggie Skillet",
       emoji: "🍳",
       servings: "1 Serving",
+      cookingTime: "10 minutes",
+      difficulty: "Easy",
+      tags: ["high-protein", "quick", "vegetarian", "balanced"],
+      dietaryInfo: ["High Protein", "Vegetarian", "Balanced"],
       ingredients: [
         "3 egg whites + 1 whole egg",
         "40g (1/4 cup) onion, chopped",
@@ -133,6 +178,10 @@ export const recipes: RecipeCategories = {
       title: "Almond Croissant Baked Oats",
       emoji: "🥐",
       servings: "External Recipe",
+      cookingTime: "30 minutes",
+      difficulty: "Medium",
+      tags: ["baked", "oats", "almond", "sweet"],
+      dietaryInfo: ["Plant-Based"],
       ingredients: [],
       instructions: [],
       isExternal: true,
@@ -141,10 +190,45 @@ export const recipes: RecipeCategories = {
   ],
   lunch: [
     {
+      id: "paneer-veggie-stir-fry",
+      title: "Paneer Veggie Stir-Fry + Brown Rice",
+      emoji: "🍛",
+      servings: "6 Servings",
+      cookingTime: "30 minutes",
+      difficulty: "Easy",
+      tags: ["vegetarian", "high-protein", "meal-prep", "indian", "one-pot"],
+      dietaryInfo: ["Vegetarian", "High Protein", "Meal Prep"],
+      ingredients: [
+        "600g (21 oz) paneer, cubed",
+        "3 bell peppers, chopped",
+        "2 red onions, sliced",
+        "6 tsp olive oil",
+        "240g (1.5 cups) dry brown rice (makes ~3 cups cooked)",
+        "1.5 tsp turmeric",
+        "1.5 tsp cumin",
+        "1.5 tsp garam masala",
+        "1.5 tsp chili powder",
+        "Salt and pepper to taste"
+      ],
+      instructions: [
+        "**Cook rice:** Boil 1.5 cups rice in 3 cups water according to package directions. Let cool and portion ~½ cup per serving",
+        "**Pan-fry paneer:** In a large skillet, heat 3 tsp olive oil. Pan-fry cubed paneer until golden on all sides. Remove and set aside",
+        "**Cook vegetables:** In the same pan, heat the remaining 3 tsp oil. Sauté onions and bell peppers until soft (5-7 minutes)",
+        "**Combine & spice:** Add paneer back in. Stir in all spices (turmeric, cumin, garam masala, chili powder) and mix to coat well",
+        "**Finish:** Simmer on low for 2-3 minutes so flavors meld. Season with salt and pepper",
+        "**Serve:** Serve hot over brown rice (½ cup per serving)"
+      ],
+      tips: ["Great for meal prep - stores well for 4-5 days", "Can substitute paneer with extra-firm tofu for vegan option"]
+    },
+    {
       id: "fish-brown-pasta",
       title: "Fish + Brown Pasta Bowl",
       emoji: "🐟",
       servings: "5–6 Servings",
+      cookingTime: "25 minutes",
+      difficulty: "Easy",
+      tags: ["fish", "pasta", "healthy", "meal-prep", "omega-3"],
+      dietaryInfo: ["High Protein", "Omega-3", "Meal Prep"],
       ingredients: [
         "600g (1.3 lbs) fish fillets (cod, tilapia, or salmon)",
         "240g (8.5 oz) brown pasta, dry",
@@ -169,6 +253,10 @@ export const recipes: RecipeCategories = {
       title: "Chicken Veggie Stir-Fry + Brown Rice or Potatoes",
       emoji: "🔄",
       servings: "1 Serving",
+      cookingTime: "20 minutes",
+      difficulty: "Easy",
+      tags: ["high-protein", "quick", "balanced", "customizable"],
+      dietaryInfo: ["High Protein", "Balanced", "Quick Prep"],
       ingredients: [
         "**Protein:** 100g (3.5 oz) chicken breast, thinly sliced",
         "1 clove garlic, minced",
@@ -195,6 +283,10 @@ export const recipes: RecipeCategories = {
       title: "Paneer Veggie Rice Bowl",
       emoji: "🍛",
       servings: "4 Servings",
+      cookingTime: "25 minutes",
+      difficulty: "Easy",
+      tags: ["vegetarian", "indian", "one-pot", "spiced"],
+      dietaryInfo: ["Vegetarian", "High Protein"],
       ingredients: [
         "400g (14 oz) low-fat paneer, cubed",
         "160g (5.6 oz) brown rice, uncooked (~2 cups cooked)",
@@ -221,10 +313,44 @@ export const recipes: RecipeCategories = {
   ],
   dinner: [
     {
+      id: "spiced-cod-tray-bake",
+      title: "Spiced Cod Tray Bake + Brown Rice",
+      emoji: "🐟",
+      servings: "3 Servings",
+      cookingTime: "25 minutes",
+      difficulty: "Easy",
+      tags: ["fish", "baked", "one-tray", "healthy", "spiced"],
+      dietaryInfo: ["High Protein", "Omega-3", "Low Fat"],
+      ingredients: [
+        "450g (1 lb) cod, divided into 3 portions",
+        "240g (1.5 cups) cooked brown rice (from ~120g dry)",
+        "300g (1.5–2 cups) broccoli or other veggies",
+        "1.5 tsp olive oil",
+        "3 lemon wedges",
+        "**Spices (divided):**",
+        "1 tsp paprika",
+        "1 tsp garlic powder",
+        "1 tsp cumin",
+        "Salt & pepper to taste"
+      ],
+      instructions: [
+        "**Preheat:** Preheat oven to 400°F (200°C)",
+        "**Prep vegetables:** Toss veggies with ¾ tsp olive oil and half the spices. Spread on a lined baking tray and roast for 10 minutes",
+        "**Season fish:** Meanwhile, season cod portions with remaining olive oil and spices",
+        "**Add fish:** After 10 minutes, add cod to tray and bake everything for another 10–12 minutes, until fish flakes easily",
+        "**Serve:** Serve each portion with 80g (½ cup) cooked brown rice and a lemon wedge"
+      ],
+      tips: ["One-tray meal makes cleanup easy", "Can substitute cod with any white fish"]
+    },
+    {
       id: "chicken-millet-khichdi",
       title: "Chicken Millet Khichdi",
       emoji: "🍛",
       servings: "5–6 Servings",
+      cookingTime: "35 minutes",
+      difficulty: "Medium",
+      tags: ["indian", "one-pot", "comfort-food", "meal-prep", "wholesome"],
+      dietaryInfo: ["High Protein", "Comfort Food", "Meal Prep"],
       ingredients: [
         "600g (1.3 lbs) chicken breast, cooked and shredded",
         "240g (1.25 cups) millets",
@@ -255,6 +381,10 @@ export const recipes: RecipeCategories = {
       title: "Grilled Chicken Buddha Bowl Meal Prep",
       emoji: "🍽️",
       servings: "4 Servings",
+      cookingTime: "40 minutes",
+      difficulty: "Medium",
+      tags: ["meal-prep", "balanced", "colorful", "healthy", "batch-cook"],
+      dietaryInfo: ["High Protein", "Balanced", "Meal Prep"],
       ingredients: [
         "**Protein:** 680g (1.5 lbs) chicken breast, boneless, skinless",
         "**Carbs:** 708g (25 oz) potatoes, cubed",
@@ -281,6 +411,10 @@ export const recipes: RecipeCategories = {
       title: "Simple Chicken Curry + Boiled Potatoes",
       emoji: "🍛",
       servings: "5 Servings",
+      cookingTime: "30 minutes",
+      difficulty: "Easy",
+      tags: ["indian", "curry", "comfort-food", "meal-prep", "spiced"],
+      dietaryInfo: ["High Protein", "Comfort Food", "Meal Prep"],
       ingredients: [
         "**Protein & Carbs:** 680g (1.5 lbs) chicken breast, cubed",
         "850g (30 oz) potatoes (~170g per serving = 5 medium potatoes), cubed",
@@ -313,6 +447,10 @@ export const recipes: RecipeCategories = {
       title: "Healthy Hot Chocolate",
       emoji: "🍫",
       servings: "1 Serving",
+      cookingTime: "5 minutes",
+      difficulty: "Easy",
+      tags: ["warm", "chocolate", "healthy", "comfort", "winter"],
+      dietaryInfo: ["Low Sugar", "Comfort Drink"],
       ingredients: [
         "240ml (1 cup) oat milk (unsweetened preferred)",
         "15g (1 tbsp) Ghirardelli cocoa powder (unsweetened)",
@@ -338,6 +476,10 @@ export const recipes: RecipeCategories = {
       title: "Quick Mung Dal Side",
       emoji: "🥣",
       servings: "1 Serving",
+      cookingTime: "15 minutes",
+      difficulty: "Easy",
+      tags: ["indian", "dal", "protein", "side-dish", "digestible"],
+      dietaryInfo: ["Vegetarian", "Plant Protein", "Digestible"],
       ingredients: [
         "10g (0.35 oz) mung dal (yellow split) — soaked 30 min if time allows",
         "1/4 tsp turmeric",
@@ -365,6 +507,10 @@ export const recipes: RecipeCategories = {
       title: "Frozen Yogurt Bark",
       emoji: "🍓",
       servings: "2–3 Servings",
+      cookingTime: "5 minutes + 3 hours freezing",
+      difficulty: "Easy",
+      tags: ["frozen", "healthy", "berries", "make-ahead", "sweet"],
+      dietaryInfo: ["High Protein", "Low Sugar", "Make Ahead"],
       ingredients: [
         "120g (4.2 oz) unflavored Greek yogurt",
         "180g (6.3 oz) berries (blueberries, strawberries, raspberries)",

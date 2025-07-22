@@ -8,6 +8,11 @@ export interface Recipe {
   tips?: string[];
   isExternal?: boolean;
   externalUrl?: string;
+  // New fields for better organization
+  cookingTime?: string;
+  difficulty?: "Easy" | "Medium" | "Hard";
+  tags?: string[];
+  dietaryInfo?: string[];
 }
 
 export interface RecipeCategory {
