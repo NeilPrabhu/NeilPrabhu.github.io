@@ -10,6 +10,33 @@ export const recipeCategories: RecipeCategory[] = [
 export const recipes: RecipeCategories = {
   breakfast: [
     {
+      id: "savory-scrambled-eggs-cottage-cheese",
+      title: "Savory Scrambled Eggs with Cottage Cheese & Veggies",
+      emoji: "🍳",
+      servings: "1 Serving",
+      cookingTime: "12 minutes",
+      difficulty: "Easy",
+      tags: ["high-protein", "savory", "cottage-cheese", "quick", "vegetarian"],
+      dietaryInfo: ["High Protein", "Vegetarian", "Quick Prep"],
+      ingredients: [
+        "80g (⅓ cup) egg whites",
+        "1 whole egg",
+        "60g (¼ cup) low-fat cottage cheese",
+        "40g (¼ cup) chopped bell pepper",
+        "30g (¼ cup) mushrooms or spinach",
+        "1 tsp olive oil or avocado spray",
+        "Salt, black pepper, garlic powder to taste"
+      ],
+      instructions: [
+        "**Heat oil:** Heat oil in a skillet over medium heat",
+        "**Sauté vegetables:** Add bell pepper and mushrooms/spinach and sauté for ~3 minutes until softened",
+        "**Prepare egg mixture:** In a bowl, whisk egg, egg whites, cottage cheese, and seasoning until well combined",
+        "**Scramble:** Pour egg mixture into the skillet and scramble gently until cooked through",
+        "**Serve:** Serve hot and garnish with scallions or herbs if desired"
+      ],
+      tips: ["Cottage cheese adds extra protein and creaminess", "Can substitute mushrooms with zucchini or other veggies"]
+    },
+    {
       id: "egg-white-scramble",
       title: "Egg White Scramble with Veggies",
       emoji: "🍳",
@@ -190,6 +217,40 @@ export const recipes: RecipeCategories = {
   ],
   lunch: [
     {
+      id: "paneer-tikka-stir-fry",
+      title: "Paneer Tikka Stir-Fry Bowl + Brown Rice",
+      emoji: "🍛",
+      servings: "6 Servings",
+      cookingTime: "25 minutes",
+      difficulty: "Easy",
+      tags: ["vegetarian", "high-protein", "meal-prep", "indian", "tikka", "one-pot"],
+      dietaryInfo: ["Vegetarian", "High Protein", "Meal Prep"],
+      ingredients: [
+        "600g (21 oz) paneer, cubed",
+        "300g (2 medium) red onions, sliced",
+        "450g (3 medium) bell peppers, chopped",
+        "6 tsp olive oil",
+        "240g (1.5 cups) dry brown rice (makes ~480g cooked)",
+        "1.5 tsp turmeric",
+        "1.5 tsp cumin",
+        "1.5 tsp chili powder",
+        "1.5 tsp garam masala",
+        "Salt & pepper to taste",
+        "**Optional:** 2 tbsp plain yogurt for marinating"
+      ],
+      instructions: [
+        "**Cook rice:** Cook rice according to package instructions (~1.5 cups dry makes ~3 cups cooked). Set aside",
+        "**Marinate paneer:** Cut paneer into cubes. Optional: marinate in 2 tbsp yogurt with half the spice mix for 10 minutes",
+        "**Heat oil:** In a large skillet or wok, heat oil over medium heat",
+        "**Cook onions:** Add onions and sauté until translucent (3-4 minutes)",
+        "**Add peppers:** Add bell peppers and cook until softened (~5 min)",
+        "**Cook paneer:** Add paneer and stir-fry until golden on all sides (5-6 minutes)",
+        "**Season:** Sprinkle in remaining spices and toss to combine. Cook for 1-2 minutes",
+        "**Serve:** Serve stir-fry mix over brown rice (80g cooked rice per serving)"
+      ],
+      tips: ["Marinating paneer in yogurt makes it extra tender", "Great for meal prep - stores well for 4-5 days"]
+    },
+    {
       id: "paneer-veggie-stir-fry",
       title: "Paneer Veggie Stir-Fry + Brown Rice",
       emoji: "🍛",
@@ -312,6 +373,38 @@ export const recipes: RecipeCategories = {
     }
   ],
   dinner: [
+    {
+      id: "baked-chicken-feta-sheet-pan",
+      title: "Baked Chicken & Feta Sheet-Pan Dinner + Brown Rice",
+      emoji: "🍗",
+      servings: "6 Servings",
+      cookingTime: "30 minutes",
+      difficulty: "Easy",
+      tags: ["chicken", "baked", "sheet-pan", "feta", "meal-prep", "one-tray"],
+      dietaryInfo: ["High Protein", "Meal Prep", "Mediterranean"],
+      ingredients: [
+        "680g (1.5 lbs) chicken breast, cut into strips or chunks",
+        "450g (3 cups) broccoli or mixed vegetables",
+        "240g (1.5 cups) cooked brown rice (from ~120g dry)",
+        "75g (½ cup) crumbled feta cheese",
+        "1 tbsp olive oil",
+        "1 tsp smoked paprika",
+        "1 tsp garlic powder",
+        "1 tsp cumin",
+        "Salt & pepper to taste",
+        "Lemon wedges & fresh parsley (optional)"
+      ],
+      instructions: [
+        "**Preheat oven:** Preheat oven to 400°F (200°C)",
+        "**Prep vegetables:** Toss broccoli and veggies with half the olive oil and half the spices. Spread on a large baking sheet",
+        "**Start baking:** Bake veggies for 10 minutes",
+        "**Season chicken:** Meanwhile, season chicken with remaining oil, paprika, garlic powder, cumin, salt and pepper",
+        "**Add chicken:** Add chicken to the tray and bake an additional 10–12 minutes, or until chicken is cooked through",
+        "**Add feta:** Sprinkle with crumbled feta in the last 2 minutes of baking",
+        "**Garnish & serve:** Garnish with lemon juice and fresh parsley. Serve over brown rice (40g per serving)"
+      ],
+      tips: ["One-tray meal makes cleanup easy", "Feta adds Mediterranean flavor and extra protein"]
+    },
     {
       id: "spiced-cod-tray-bake",
       title: "Spiced Cod Tray Bake + Brown Rice",
