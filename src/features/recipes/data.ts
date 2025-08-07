@@ -10,6 +10,34 @@ export const recipeCategories: RecipeCategory[] = [
 export const recipes: RecipeCategories = {
   breakfast: [
     {
+      id: "mediterranean-cottage-cheese-bowl",
+      title: "Savory Mediterranean Cottage Cheese Bowl",
+      emoji: "🍳",
+      servings: "6 Servings",
+      cookingTime: "15 minutes",
+      difficulty: "Easy",
+      tags: ["high-protein", "mediterranean", "cottage-cheese", "meal-prep", "vegetarian", "fresh"],
+      dietaryInfo: ["High Protein", "Vegetarian", "Mediterranean", "Meal Prep"],
+      ingredients: [
+        "720g (3 cups) plain cottage cheese",
+        "12 large eggs",
+        "90g (6 tbsp) Greek yogurt",
+        "900g (3 medium) cucumbers, chopped",
+        "450g (3 cups) cherry tomatoes, halved",
+        "Olive oil (optional drizzle)",
+        "Salt, pepper, za'atar or fresh dill to taste"
+      ],
+      instructions: [
+        "**Prepare bowls:** In each of 6 bowls, place 120g (1/2 cup) cottage cheese",
+        "**Scramble eggs:** Scramble 12 eggs with 6 tbsp Greek yogurt in a large skillet until just set",
+        "**Divide eggs:** Divide eggs equally among the 6 bowls (about 2 eggs per bowl)",
+        "**Add vegetables:** Top each bowl with chopped cucumber and cherry tomatoes",
+        "**Season & serve:** Optional: Drizzle with olive oil and season with salt, pepper, and za'atar/dill",
+        "**Storage:** Serve immediately or store in airtight containers for up to 3 days"
+      ],
+      tips: ["Perfect for meal prep breakfast", "Za'atar adds authentic Mediterranean flavor", "Can substitute dill with oregano or basil"]
+    },
+    {
       id: "savory-scrambled-eggs-cottage-cheese",
       title: "Savory Scrambled Eggs with Cottage Cheese & Veggies",
       emoji: "🍳",
@@ -217,6 +245,37 @@ export const recipes: RecipeCategories = {
   ],
   lunch: [
     {
+      id: "shrimp-paneer-coconut-curry",
+      title: "Shrimp or Paneer Coconut Curry",
+      emoji: "🍛",
+      servings: "6 Servings",
+      cookingTime: "20 minutes",
+      difficulty: "Medium",
+      tags: ["curry", "coconut", "indian", "spicy", "meal-prep", "protein-options"],
+      dietaryInfo: ["High Protein", "Meal Prep", "Spicy"],
+      ingredients: [
+        "600g (21 oz) shrimp or low-fat paneer, cubed",
+        "300g (2 medium) red onions, finely sliced (or 12 shallots)",
+        "12 Bird's Eye chilies (adjust to taste)",
+        "3 tsp (1 tbsp) turmeric powder",
+        "2 tbsp whole peppercorns, crushed",
+        "45g (3 tbsp) cashew paste",
+        "45ml (3 tbsp) coconut milk",
+        "45ml (3 tbsp) coconut oil",
+        "Salt to taste",
+        "400g (2 cups) cooked brown rice (from ~200g dry)"
+      ],
+      instructions: [
+        "**Heat oil:** Heat 3 tbsp coconut oil in a large pan over medium heat",
+        "**Cook aromatics:** Add onions and chilies. Sauté until onions are softened and translucent (5-6 minutes)",
+        "**Add spices:** Add turmeric, crushed peppercorns, and salt. Cook for 1–2 minutes until fragrant",
+        "**Create sauce:** Stir in cashew paste and coconut milk to create a creamy sauce",
+        "**Cook protein:** Add shrimp or paneer and simmer for 6–8 minutes until shrimp is pink/cooked or paneer is heated through",
+        "**Serve:** Serve each portion with ~65g (⅓ cup) cooked brown rice"
+      ],
+      tips: ["Adjust chilies based on heat preference", "Can substitute cashew paste with ground cashews", "Great with naan or roti instead of rice"]
+    },
+    {
       id: "paneer-tikka-stir-fry",
       title: "Paneer Tikka Stir-Fry Bowl + Brown Rice",
       emoji: "🍛",
@@ -373,6 +432,35 @@ export const recipes: RecipeCategories = {
     }
   ],
   dinner: [
+    {
+      id: "seared-salmon-lemon-dill-yogurt",
+      title: "Seared Salmon + Lemon Dill Yogurt + Roasted Veggies",
+      emoji: "🐟",
+      servings: "6 Servings",
+      cookingTime: "35 minutes",
+      difficulty: "Medium",
+      tags: ["salmon", "omega-3", "roasted", "yogurt-sauce", "healthy", "meal-prep"],
+      dietaryInfo: ["High Protein", "Omega-3", "Healthy Fats", "Meal Prep"],
+      ingredients: [
+        "680g (24 oz / 1.5 lb) salmon fillets",
+        "450g (3 cups) chopped mixed veggies (carrot, zucchini, bell pepper)",
+        "400g (2 cups) cooked brown rice (from ~200g dry)",
+        "180g (¾ cup) low-fat Greek yogurt",
+        "30ml (2 tbsp) lemon juice",
+        "8g (2 tbsp) chopped fresh dill",
+        "Olive oil spray",
+        "Salt and pepper to taste"
+      ],
+      instructions: [
+        "**Preheat oven:** Preheat oven to 400°F (200°C)",
+        "**Roast vegetables:** Toss 3 cups of chopped veggies with olive oil spray, salt, and pepper. Roast for 20–25 minutes until tender",
+        "**Prepare salmon:** Meanwhile, season salmon fillets with salt and pepper",
+        "**Cook salmon:** Sear salmon in a hot pan for 3-4 minutes per side, then transfer to oven for 10–12 minutes (or bake entirely for 10-12 minutes)",
+        "**Make yogurt sauce:** Mix Greek yogurt, lemon juice, chopped dill, and a pinch of salt in a bowl",
+        "**Serve:** Serve each plate with 115g (4 oz) salmon, 65g (⅓ cup) brown rice, roasted veggies, and 30g yogurt sauce"
+      ],
+      tips: ["Don't overcook salmon - it should flake easily", "Yogurt sauce can be made ahead", "Great source of omega-3 fatty acids"]
+    },
     {
       id: "baked-chicken-feta-sheet-pan",
       title: "Baked Chicken & Feta Sheet-Pan Dinner + Brown Rice",
