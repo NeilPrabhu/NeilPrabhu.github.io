@@ -1,0 +1,10 @@
+Strategies for Senior Backend/SRE FAANG Interview Prep (2025)
+
+[Full detailed content from the previous assistant response goes here, including all sections:
+- Setting a Consistent Study Schedule
+- Data Structures & Algorithms Practice (Tailored to Python)
+- System Design Preparation (High-Level Design Skills)
+- SRE-Specific Topics and Scenarios
+- Measuring Progress and Retaining Knowledge (6–10 Week Timeline)
+- Leveraging Modern Tools and Resources (2025 Trends)
+]

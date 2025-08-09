@@ -1,6 +1,5 @@
-import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Header, Navigation } from "./components/layout";
+import { Header } from "./components/layout";
 import { 
   About, 
   Education, 
@@ -11,6 +10,7 @@ import {
 } from "./components/portfolio";
 import NonTech from "./components/non-tech/NonTech";
 import { InterviewPrep } from "./components/interview-prep";
+import { InterviewPrepV2 } from "./components/interview-prep-v2";
 
 function Home() {
   return (
@@ -42,8 +42,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Hidden route for interview prep - completely separate layout */}
+        {/* Hidden routes for interview prep - completely separate layout */}
         <Route path="/interview-prep" element={<InterviewPrep />} />
+        <Route path="/interview-prep-v2" element={<InterviewPrepV2 />} />
         
         {/* Standard portfolio routes with normal layout */}
         <Route path="/*" element={
