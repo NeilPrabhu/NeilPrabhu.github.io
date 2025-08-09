@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { InterviewTask, TaskType } from '../../features/interview-prep/types';
+import { InterviewTask, TaskType, AccountabilityData, TimelineStatus } from '../../features/interview-prep/types';
 import { isAuthenticated, logout } from '../../features/interview-prep/auth';
 import { 
   loadProgress, 
   toggleTaskCompletion, 
   updateTask, 
   calculateProgress,
-  downloadCSV
+  downloadCSV,
+  loadAccountability,
+  calculateTimelineStatus,
+  getMotivationalMessage
 } from '../../features/interview-prep/storage';
 import AuthGate from './AuthGate';
 import Dashboard from './Dashboard';
 import TaskCard from './TaskCard';
 import TopicGuide from './TopicGuide';
+import AccountabilityTracker from './AccountabilityTracker';
 
 const InterviewPrep: React.FC = () => {
   const [authenticated, setAuthenticated] = useState(false);
@@ -19,6 +23,8 @@ const InterviewPrep: React.FC = () => {
   const [selectedWeek, setSelectedWeek] = useState<number>(1);
   const [loading, setLoading] = useState(true);
   const [showTopicGuide, setShowTopicGuide] = useState(false);
+  const [accountability, setAccountability] = useState<AccountabilityData | null>(null);
+  const [timelineStatus, setTimelineStatus] = useState<TimelineStatus | null>(null);
 
   useEffect(() => {
     // Check authentication on mount
@@ -35,9 +41,17 @@ const InterviewPrep: React.FC = () => {
     const progressData = loadProgress();
     setTasks(progressData);
     
-    // Set current week based on progress
-    const stats = calculateProgress(progressData);
-    setSelectedWeek(stats.currentWeek);
+    // Load accountability data
+    const accountabilityData = loadAccountability();
+    setAccountability(accountabilityData);
+    
+    // Calculate timeline status
+    const timeline = calculateTimelineStatus(progressData, accountabilityData);
+    setTimelineStatus(timeline);
+    
+    // Set current week based on expected day (for accountability) or progress
+    const targetWeek = Math.ceil(timeline.expectedDay / 7);
+    setSelectedWeek(targetWeek);
   };
 
   const handleAuthenticated = () => {
@@ -48,6 +62,15 @@ const InterviewPrep: React.FC = () => {
   const handleToggleTask = (globalDay: number, taskType: TaskType) => {
     const updatedTasks = toggleTaskCompletion(tasks, globalDay, taskType);
     setTasks(updatedTasks);
+    
+    // Refresh accountability data after task completion
+    if (accountability) {
+      const updatedAccountability = loadAccountability();
+      setAccountability(updatedAccountability);
+      
+      const updatedTimeline = calculateTimelineStatus(updatedTasks, updatedAccountability);
+      setTimelineStatus(updatedTimeline);
+    }
   };
 
   const handleUpdateNotes = (globalDay: number, notes: string) => {
@@ -63,6 +86,11 @@ const InterviewPrep: React.FC = () => {
 
   const handleExport = () => {
     downloadCSV(tasks);
+  };
+
+  const handleAccountabilityUpdate = () => {
+    // Refresh accountability data when user pauses/resumes
+    loadData();
   };
 
   if (loading) {
@@ -128,6 +156,16 @@ const InterviewPrep: React.FC = () => {
         </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Accountability Tracker */}
+        {accountability && timelineStatus && (
+          <AccountabilityTracker
+            accountability={accountability}
+            timelineStatus={timelineStatus}
+            motivationalMessage={getMotivationalMessage(timelineStatus, accountability)}
+            onUpdate={handleAccountabilityUpdate}
+          />
+        )}
+
         {/* Dashboard */}
         <Dashboard stats={stats} />
 
@@ -142,7 +180,13 @@ const InterviewPrep: React.FC = () => {
               </div>
             </div>
             <div className="text-sm text-gray-500">
-              {stats.currentWeek ? `Currently on Week ${stats.currentWeek}` : 'Select a week'}
+              {timelineStatus ? (
+                timelineStatus.status === 'behind' ? 
+                  `⚠️ Expected: Day ${timelineStatus.expectedDay} | You're on: Day ${timelineStatus.actualDay}` :
+                timelineStatus.status === 'ahead' ?
+                  `🚀 Expected: Day ${timelineStatus.expectedDay} | You're on: Day ${timelineStatus.actualDay}` :
+                  `🎯 On track - Day ${timelineStatus.expectedDay}`
+              ) : `Currently on Week ${stats.currentWeek}`}
             </div>
           </div>
           

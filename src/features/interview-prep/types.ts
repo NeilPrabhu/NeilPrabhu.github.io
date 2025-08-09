@@ -32,4 +32,23 @@ export interface ProgressStats {
   currentDay: number;
 }
 
+export interface AccountabilityData {
+  startDate: string; // ISO date string when user started
+  lastCheckIn: string; // ISO date string of last activity
+  currentStreak: number; // consecutive days with activity
+  longestStreak: number; // best streak achieved
+  pausedUntil?: string; // optional pause date
+  skippedDays: number; // total days skipped/behind
+  totalCheckIns: number; // total days with any activity
+}
+
+export interface TimelineStatus {
+  expectedDay: number; // where they should be based on calendar
+  actualDay: number; // furthest day they've completed
+  daysAhead: number; // positive if ahead, negative if behind
+  status: 'ahead' | 'onTrack' | 'behind' | 'paused';
+  recommendedAction: string;
+  catchUpDaysNeeded: number;
+}
+
 export type TaskType = 'coding' | 'systemDesign' | 'infra' | 'behavioral';
