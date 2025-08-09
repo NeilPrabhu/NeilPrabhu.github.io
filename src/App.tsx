@@ -10,6 +10,7 @@ import {
   PrivacyPolicy 
 } from "./components/portfolio";
 import NonTech from "./components/non-tech/NonTech";
+import { InterviewPrep } from "./components/interview-prep";
 
 function Home() {
   return (
@@ -40,23 +41,31 @@ function Home() {
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
-        <Header />
-        <main className="max-w-4xl mx-auto px-4 py-8">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/non-tech" element={<NonTech />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          </Routes>
-        </main>
-        <footer className="border-t">
-          <div className="max-w-4xl mx-auto px-4 py-4">
-            <p className="text-center text-gray-600">
-              © {new Date().getFullYear()} Neil Prabhu. All rights reserved.
-            </p>
+      <Routes>
+        {/* Hidden route for interview prep - completely separate layout */}
+        <Route path="/interview-prep" element={<InterviewPrep />} />
+        
+        {/* Standard portfolio routes with normal layout */}
+        <Route path="/*" element={
+          <div className="min-h-screen bg-gray-50">
+            <Header />
+            <main className="max-w-4xl mx-auto px-4 py-8">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/non-tech" element={<NonTech />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              </Routes>
+            </main>
+            <footer className="border-t">
+              <div className="max-w-4xl mx-auto px-4 py-4">
+                <p className="text-center text-gray-600">
+                  © {new Date().getFullYear()} Neil Prabhu. All rights reserved.
+                </p>
+              </div>
+            </footer>
           </div>
-        </footer>
-      </div>
+        } />
+      </Routes>
     </Router>
   );
 }
