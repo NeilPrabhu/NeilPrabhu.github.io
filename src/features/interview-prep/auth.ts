@@ -5,7 +5,7 @@ const AUTH_KEY = 'interview_prep_auth';
 const SESSION_KEY = 'interview_prep_session';
 
 // You can change this password - it's hashed with a simple algorithm
-const EXPECTED_HASH = 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3'; // "secret"
+const EXPECTED_HASH = '2bb80d537b1da3e38bd30361aa855686bde0eacd7162fef6a25fe97bf527a25b'; // "secret"
 
 // Simple hash function (you should change the password)
 const simpleHash = (str: string): string => {
