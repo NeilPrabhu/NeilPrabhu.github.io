@@ -11,12 +11,14 @@ import {
 import AuthGate from './AuthGate';
 import Dashboard from './Dashboard';
 import TaskCard from './TaskCard';
+import TopicGuide from './TopicGuide';
 
 const InterviewPrep: React.FC = () => {
   const [authenticated, setAuthenticated] = useState(false);
   const [tasks, setTasks] = useState<InterviewTask[]>([]);
   const [selectedWeek, setSelectedWeek] = useState<number>(1);
   const [loading, setLoading] = useState(true);
+  const [showTopicGuide, setShowTopicGuide] = useState(false);
 
   useEffect(() => {
     // Check authentication on mount
@@ -83,64 +85,97 @@ const InterviewPrep: React.FC = () => {
   const weekTasks = tasks.filter(task => task.week === selectedWeek);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-3">
-              <span className="text-2xl">💼</span>
-              <h1 className="text-xl font-bold text-gray-900">Interview Prep Tracker</h1>
-            </div>
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={handleExport}
-                className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-                📥 Export CSV
-              </button>
-              <button
-                onClick={handleLogout}
-                className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-              >
-                🔓 Logout
-              </button>
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        {/* Enhanced Header */}
+        <div className="bg-white shadow-lg border-b border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-20">
+              <div className="flex items-center space-x-4">
+                <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 rounded-xl">
+                  <span className="text-2xl">💼</span>
+                </div>
+                <div>
+                  <h1 className="text-2xl font-bold text-gray-900">Interview Prep Journey</h1>
+                  <p className="text-sm text-gray-600">70-day backend engineering preparation</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <button
+                  onClick={() => setShowTopicGuide(true)}
+                  className="inline-flex items-center px-4 py-2 border-2 border-purple-200 shadow-sm text-sm font-medium rounded-xl text-purple-700 bg-purple-50 hover:bg-purple-100 transition-colors"
+                >
+                  <span className="mr-2">📚</span>
+                  Study Guide
+                </button>
+                <button
+                  onClick={handleExport}
+                  className="inline-flex items-center px-4 py-2 border-2 border-blue-200 shadow-sm text-sm font-medium rounded-xl text-blue-700 bg-blue-50 hover:bg-blue-100 transition-colors"
+                >
+                  <span className="mr-2">📥</span>
+                  Export
+                </button>
+                <button
+                  onClick={handleLogout}
+                  className="inline-flex items-center px-4 py-2 border-2 border-red-200 text-sm font-medium rounded-xl text-red-700 bg-red-50 hover:bg-red-100 transition-colors"
+                >
+                  <span className="mr-2">🔓</span>
+                  Logout
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Dashboard */}
         <Dashboard stats={stats} />
 
         {/* Week Navigation */}
-        <div className="bg-white rounded-xl shadow-sm p-6 mb-6">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold text-gray-900">📅 Week Navigation</h2>
-            <div className="text-sm text-gray-600">
-              Select a week to view tasks
+        <div className="bg-white rounded-2xl shadow-lg p-6 mb-8 border border-gray-100">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center space-x-3">
+              <span className="text-2xl">📅</span>
+              <div>
+                <h2 className="text-xl font-bold text-gray-900">Week Navigation</h2>
+                <p className="text-sm text-gray-600">Choose a week to focus on</p>
+              </div>
+            </div>
+            <div className="text-sm text-gray-500">
+              {stats.currentWeek ? `Currently on Week ${stats.currentWeek}` : 'Select a week'}
             </div>
           </div>
           
-          <div className="flex flex-wrap gap-2">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
             {weeks.map(week => {
               const weekStats = calculateProgress(tasks.filter(t => t.week === week));
+              const isCurrentWeek = stats.currentWeek === week;
               return (
                 <button
                   key={week}
                   onClick={() => setSelectedWeek(week)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  className={`p-4 rounded-xl text-sm font-medium transition-all hover:scale-105 ${
                     selectedWeek === week
-                      ? 'bg-blue-100 text-blue-800 border-2 border-blue-300'
+                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg transform scale-105'
                       : weekStats.overallProgress === 100
-                      ? 'bg-green-100 text-green-800 border border-green-300'
-                      : 'bg-gray-100 text-gray-700 border border-gray-300 hover:bg-gray-200'
+                      ? 'bg-green-100 text-green-800 border-2 border-green-300 hover:bg-green-200'
+                      : 'bg-gray-50 text-gray-700 border-2 border-gray-200 hover:bg-gray-100'
                   }`}
                 >
-                  Week {week}
-                  {weekStats.overallProgress === 100 && ' ✅'}
-                  <div className="text-xs mt-1">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-bold">Week {week}</span>
+                    {weekStats.overallProgress === 100 && <span>🎉</span>}
+                    {isCurrentWeek && <span>📍</span>}
+                  </div>
+                  <div className="w-full bg-white bg-opacity-30 rounded-full h-2 mb-1">
+                    <div 
+                      className={`h-2 rounded-full transition-all ${
+                        selectedWeek === week ? 'bg-white' : weekStats.overallProgress === 100 ? 'bg-green-600' : 'bg-blue-500'
+                      }`}
+                      style={{ width: `${weekStats.overallProgress}%` }}
+                    />
+                  </div>
+                  <div className="text-xs opacity-90">
                     {weekStats.overallProgress}% complete
                   </div>
                 </button>
@@ -150,13 +185,29 @@ const InterviewPrep: React.FC = () => {
         </div>
 
         {/* Tasks for Selected Week */}
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold text-gray-900">
-              📚 Week {selectedWeek} Tasks
-            </h2>
-            <div className="text-sm text-gray-600">
-              {weekTasks.filter(t => t.doneCoding && t.doneSD && t.doneInfra && t.doneBehavioral).length}/{weekTasks.length} days completed
+        <div className="space-y-6">
+          <div className="flex items-center justify-between bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+            <div className="flex items-center space-x-4">
+              <span className="text-3xl">📚</span>
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900">
+                  Week {selectedWeek} Tasks
+                </h2>
+                <p className="text-gray-600">
+                  {weekTasks.filter(t => t.doneCoding && t.doneSD && t.doneInfra && t.doneBehavioral).length} of {weekTasks.length} days completed
+                </p>
+              </div>
+            </div>
+            <div className="text-right">
+              <div className="text-sm text-gray-500 mb-1">Week Progress</div>
+              <div className="w-32 bg-gray-200 rounded-full h-3">
+                <div 
+                  className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full transition-all"
+                  style={{ 
+                    width: `${weekTasks.length > 0 ? (weekTasks.filter(t => t.doneCoding && t.doneSD && t.doneInfra && t.doneBehavioral).length / weekTasks.length) * 100 : 0}%` 
+                  }}
+                />
+              </div>
             </div>
           </div>
 
@@ -170,14 +221,22 @@ const InterviewPrep: React.FC = () => {
           ))}
 
           {weekTasks.length === 0 && (
-            <div className="text-center py-8 text-gray-500">
-              <div className="text-4xl mb-4">📅</div>
-              <p>No tasks found for this week</p>
+            <div className="text-center py-12 bg-white rounded-2xl shadow-lg">
+              <div className="text-6xl mb-4">📅</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">No Tasks This Week</h3>
+              <p className="text-gray-600">Select a different week to view tasks</p>
             </div>
           )}
         </div>
       </div>
     </div>
+
+    {/* Topic Guide Modal */}
+    <TopicGuide 
+      isOpen={showTopicGuide} 
+      onClose={() => setShowTopicGuide(false)} 
+    />
+  </>
   );
 };
 

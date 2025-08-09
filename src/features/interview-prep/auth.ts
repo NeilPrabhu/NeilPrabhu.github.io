@@ -44,7 +44,7 @@ export const authenticate = async (password: string): Promise<boolean> => {
   } catch (error) {
     // Fallback to simple hash if Web Crypto API is not available
     const hash = simpleHash(password);
-    if (hash === '79d86e') { // "secret" with simple hash
+    if (hash === '3604b150') { // "secret" with simple hash
       const session = {
         authenticated: true,
         expires: Date.now() + (24 * 60 * 60 * 1000)
